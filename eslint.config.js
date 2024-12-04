@@ -45,6 +45,7 @@ export default tseslint.config(
       }],
       'react/button-has-type': 2,
       'react/no-array-index-key': 2,
+      'react/no-unescaped-entities': 0
     },
   },
 )

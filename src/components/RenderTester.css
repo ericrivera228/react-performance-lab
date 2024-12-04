@@ -1,0 +1,91 @@
+:root {
+  --highlight-color: #00e676; /* set default value for "color" variable */
+}
+
+.render-tester{
+  width: 500px;
+  margin-top: 50px;
+}
+
+.display-box{
+  padding: 15px;
+  text-align: center;
+  border-radius: 100px;
+}
+
+.display-box[animation-trigger='false'] {
+  animation: highlightColor1 1000ms 1;
+}
+
+.display-box[animation-trigger='true'] {
+  animation: highlightColor2 1000ms 1;
+}
+
+.header{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.children-container{
+  margin-top: 150px;
+}
+
+/**
+  * Need to duplicate this animation to trick CSS into showing the 
+  * thing whenever the value for toggle changes
+  */
+@keyframes highlightColor1 {
+  0% {
+    background-color: var(--highlight-color);
+  }
+
+  75% {
+    background-color: var(--highlight-color);;
+  }
+
+  100%{
+    background-color: transparent;
+  }
+}
+
+@keyframes highlightColor2 {
+  0% {
+    background-color: var(--highlight-color);;
+  }
+
+  75% {
+    background-color: var(--highlight-color);
+  }
+
+  100%{
+    background-color: transparent;
+  }
+}
+
+@keyframes highlightColor3 {
+  0% {
+    background-color: var(--highlight-color);;
+  }
+
+  75% {
+    background-color: var(--highlight-color);
+  }
+
+  100%{
+    background-color: transparent;
+  }
+}
+
+@keyframes highlightColor4 {
+  0% {
+    background-color: var(--highlight-color);;
+  }
+
+  75% {
+    background-color: var(--highlight-color);
+  }
+
+  100%{
+    background-color: transparent;
+  }
+}
