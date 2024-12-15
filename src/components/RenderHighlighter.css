@@ -1,5 +1,6 @@
 :root {
   --highlight-color: #00e676; /* set default value for "color" variable */
+  --highlight-duration: 500ms;
 }
 
 .render-tester{
@@ -14,11 +15,11 @@
 }
 
 .display-box[animation-trigger='false'] {
-  animation: highlightColor1 1000ms 1;
+  animation: highlightColor1 var(--highlight-duration) 1;
 }
 
 .display-box[animation-trigger='true'] {
-  animation: highlightColor2 1000ms 1;
+  animation: highlightColor2 var(--highlight-duration) 1;
 }
 
 .header{
@@ -28,6 +29,8 @@
 
 .children-container{
   margin-top: 150px;
+  display: flex;
+  justify-content: space-between;
 }
 
 /**
@@ -35,57 +38,21 @@
   * thing whenever the value for toggle changes
   */
 @keyframes highlightColor1 {
-  0% {
+  0%, 75% {
     background-color: var(--highlight-color);
   }
 
-  75% {
-    background-color: var(--highlight-color);;
-  }
-
-  100%{
+  100% {
     background-color: transparent;
   }
 }
 
 @keyframes highlightColor2 {
-  0% {
-    background-color: var(--highlight-color);;
-  }
-
-  75% {
+  0%, 75% {
     background-color: var(--highlight-color);
   }
 
-  100%{
-    background-color: transparent;
-  }
-}
-
-@keyframes highlightColor3 {
-  0% {
-    background-color: var(--highlight-color);;
-  }
-
-  75% {
-    background-color: var(--highlight-color);
-  }
-
-  100%{
-    background-color: transparent;
-  }
-}
-
-@keyframes highlightColor4 {
-  0% {
-    background-color: var(--highlight-color);;
-  }
-
-  75% {
-    background-color: var(--highlight-color);
-  }
-
-  100%{
+  100% {
     background-color: transparent;
   }
 }
